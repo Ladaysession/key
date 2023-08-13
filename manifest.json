@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Key",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "content_scripts": [
     {
       "matches": [
         "<all_urls>"
       ],
-      "js": ["main_keys.js", "youtube_cheker.js", "additional_button.js"]
+      "js": ["js.js"]
     }
   ]
 }

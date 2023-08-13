@@ -1,3 +1,35 @@
+//ЮТУБ
+console.log('start')
+
+document.addEventListener('keydown', function(event) {
+  //удаляем лого на видео
+  if (event.key == 'Z' ) {
+
+    console.log('0') //этап 0 завершен, далее проверяем что сайт - ютуб
+
+    if (document.querySelector('.annotation-type-custom')) { //проверяем, это ли видео на ютубе?
+
+      console.log('1') //этап 1 завершен, блок на ютубе удален
+
+      document.querySelector('.annotation-type-custom').remove() //убираем блок
+    }
+  }
+
+
+  //удаляем верхний блок на главной странице
+  if (event.key == 'X' ) {
+
+    localStorage.setItem("a1", 'ZERO');
+    percent_of_views()
+    
+  }
+
+
+
+
+  
+});
+
 array_localstorage = [0]
 
 function percent_of_views() {
@@ -10,6 +42,9 @@ subscribers_string = document.querySelectorAll('#subscriber-count')[0].textConte
 KMH_subscribers = 0;
 subscribers_count = '';
 i = 0;
+result = 0; //
+videos_counter = 0; //
+array_counter = 0;
 
 while( i < subscribers_string.length ){
 
@@ -96,11 +131,33 @@ while( i < videos.length){
   //ВЫВОДИМ РЕЗУЛЬТАТ К КАЖДОМУ РОЛИКУ
   //ДЛЯ КАЖДОГО РОЛИКА СОЗДАЕТСЯ НЕБОЛЬШОЙ span-БЛОК, КУДА И ВЫВОДИТЬСЯ РЕЗУЛЬТАТ (%)
   //ЕСЛИ ТАКОВОЙ span-БЛОК УЖЕ ЕСТЬ, ТО ВМЕСТО СОЗДАНИЯ НОВОГО - РЕЗУЛЬТАТ ВНОСИТЬСЯ В НЕГО
-  if (document.querySelectorAll('.percent')[videos_counter] == undefined) {
-    document.querySelectorAll("#metadata-line")[videos_counter].insertAdjacentHTML("afterbegin", '<span class="percent">'+ '  [ ' + result + '%' + ' ] '+'</span>')
+  testI = document.querySelectorAll("#metadata-line").length
+
+  if (document.querySelectorAll('.percent-video')[videos_counter] == undefined) {
+    document.querySelectorAll("#metadata-line")[videos_counter].insertAdjacentHTML("afterbegin", '<span class="percent-video">'+ '  [ ' + result + '%' + ' ] '+'</span>')
   } else {
-    document.querySelectorAll('.percent')[videos_counter].textContent = '  [ ' + result + '%' + ' ] '
+    document.querySelectorAll('.percent-video')[videos_counter].textContent = '  [ ' + result + '%' + ' ] '
   }
+
+
+
+
+  // document.querySelectorAll("#metadata-line")[ i / 2 ].insertAdjacentHTML("afterbegin", '<span class="percent">'+ '  [ ' + result + '%' + ' ] '+'</span>')
+
+  // if ( document.querySelectorAll("#metadata-line > .percent-video")[ i / 2 ] === undefined) {
+
+  //   document.querySelectorAll("#metadata-line")[ i / 2 ].insertAdjacentHTML("afterbegin", '<span class="percent-video">'+ '  [ ' + result + '%' + ' ] '+'</span>')
+
+  // } else {
+  //   // alert(321)
+  // }
+
+
+
+
+
+
+
 
 
 
@@ -109,25 +166,25 @@ while( i < videos.length){
   if ( result >= 0 && result < 15 ) {
 
     // videos[i].style.color = '#ff0000';
-    document.querySelectorAll('.percent')[videos_counter].style.background = "#ff0000";
+    document.querySelectorAll('.percent-video')[ i / 2 ].style.background = "#ff0000";
 
   }  else if ( result >= 15 && result <= 50 ) {
 
     // videos[i].style.color = '#ff8900'; 
-    document.querySelectorAll('.percent')[videos_counter].style.background = "#FF9800";
+    document.querySelectorAll('.percent-video')[ i / 2 ].style.background = "#FF9800";
 
   } else if ( result >= 51 && result <= 100 ) {
 
     // videos[i].style.color = '#8BC34A';
-    document.querySelectorAll('.percent')[videos_counter].style.background = "#CDDC39";
+    document.querySelectorAll('.percent-video')[ i / 2 ].style.background = "#CDDC39";
 
   } else if ( result > 100 ) {
 
     // videos[i].style.color = '#00c400';
     videos[i].style.background = 'black';
-    document.querySelectorAll('.percent')[videos_counter].style.background = "#4CAF50";
+    document.querySelectorAll('.percent-video')[ i / 2 ].style.background = "#4CAF50";
     videos[i].style.color = '#4CAF50';
-    document.querySelectorAll('.percent')[videos_counter].style.color = "black";
+    document.querySelectorAll('.percent-video')[ i / 2 ].style.color = "black";
 
     //ВЫВОД В КОНСОЛЬ: ПРОЦЕНТ > НАЗВАНИЕ > ССЫЛКА
     array_localstorage[array_counter] = '  [ ' + result + '%' + ' ] ' + video_title.textContent + ' || ' + video_title.parentElement.href
