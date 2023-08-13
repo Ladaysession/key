@@ -24,6 +24,12 @@ document.addEventListener('keydown', function(event) {
   	
   }
 
+  if (event.key == 'A' ) {
+
+    spawn_additional_button()
+    
+  }
+
 
 
 });
