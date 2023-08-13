@@ -21,14 +21,21 @@ document.addEventListener('keydown', function(event) {
 
     localStorage.setItem("a1", 'ZERO');
     percent_of_views()
+    alert(123)
   	
   }
 
-  if (event.key == 'A' ) {
+  // if (event.key == 'A' ) {
 
-    spawn_additional_button()
+  //   spawn_additional_button()
     
-  }
+  // }
+
+  // if (event.key == 'S' ) {
+
+  //   show_additional_list()
+    
+  // }
 
 
 

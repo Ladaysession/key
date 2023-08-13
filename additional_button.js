@@ -5,16 +5,9 @@ function spawn_additional_button () {
 
 
 
-// document.querySelector(".additional-button").addEventListener("click", show_additional_list());
-
-// function show_additional_list(){
-//   alert('123123')
-//   // document.querySelector('.additional-list').classList.remove("hidden");
-// }
-
-document.querySelector(".additional-button").onclick = function() {myFunction()};
-
-function myFunction() {
-  document.querySelector(".additional-button").innerHTML = "YOU CLICKED ME!";
-  alert('asd')
+function show_additional_list(){
+  alert('123123')
+  document.querySelector('.additional-list').classList.remove("hidden");
 }
+
+
