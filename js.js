@@ -178,6 +178,7 @@ while( i < videos.length){
     // videos[i].style.color = '#8BC34A';
     document.querySelectorAll('.percent-video')[ i / 2 ].style.background = "#CDDC39";
 
+
   } else if ( result > 100 ) {
 
     // videos[i].style.color = '#00c400';
@@ -204,3 +205,5 @@ while( i < videos.length){
 
 
 }
+
+//test-minor
