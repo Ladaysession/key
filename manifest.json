@@ -7,7 +7,7 @@
       "matches": [
         "<all_urls>"
       ],
-      "js": ["js.js"]
+      "js": ["main_keys.js", "youtube_cheker.js", "additional_button.js"]
     }
   ]
 }
