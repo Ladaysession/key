@@ -26,12 +26,16 @@
 
 function spawn_additional_block(){
 
+
 	if (document.querySelector('.additional-div') == undefined) {
 
-	document.querySelector("#buttons").insertAdjacentHTML("afterbegin", '<div class="additional-div"> <button>HELLO WORLD!</button> <div class="additional-div-videos hidden" style="width:100px;height:100px;background:red;"> </div> </div>')
+	document.querySelector("#buttons").insertAdjacentHTML("afterbegin", '<div class="additional-div"> <button>HELLO WORLD!</button> <div class="additional-div-videos"> <table> <tbody class="videos-list"> </tbody> </table> </div> </div>')
 
 	} else {
+
 		document.querySelector('.additional-div').remove()
+
 	}
+
 
 }

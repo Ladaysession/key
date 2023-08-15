@@ -7,7 +7,7 @@
       "matches": [
         "<all_urls>"
       ],
-      "js": ["main_key.js", "percent_of_views.js", "additional_block.js"]
+      "js": ["main_key.js", "percent_of_views.js", "additional_block.js", "videos_list.js"]
     }
   ]
 }

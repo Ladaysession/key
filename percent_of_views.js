@@ -159,6 +159,13 @@ while( i < videos.length){
     array_localstorage[array_counter] = '  [ ' + result + '%' + ' ] ' + video_title.textContent + ' || ' + video_title.parentElement.href
     array_counter++;
     // alert(array_localstorage[videos_counter])
+
+
+    if (document.querySelector('.additional-div') != undefined) {
+      
+    }
+    
+
   }
 
 
@@ -174,4 +181,4 @@ while( i < videos.length){
 
 }
 
-//test-minor
+//test-minor процент преввью просмотры название удалить
