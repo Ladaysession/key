@@ -6,6 +6,11 @@ array_localstorage = []
 subscribers_string = document.querySelectorAll('#subscriber-count')[0].textContent
 // subscribers_string = subscribers_string.substr(0,5)
 
+
+// video_list_table = document.querySelector(".videos-list")
+// video_list_table.innerHTML = ''
+
+
 //Thousands (K) or Millions (M) or Hundrets (H)
 KMH_subscribers = 0;
 subscribers_count = '';
@@ -50,6 +55,7 @@ console.log(subscribers_count)
 
 videos = document.querySelectorAll('.inline-metadata-item');
 
+
 //Thousands (K) or Millions (M) or Hundrets (H)
 i = 0;
 videos_counter = 0;
@@ -63,6 +69,7 @@ while( i < videos.length){
   result = 0;
   KMH_views = 0;
   views_count = '';
+
 
   video_title = document.querySelectorAll('#video-title')[videos_counter]
 
@@ -161,10 +168,18 @@ while( i < videos.length){
     // alert(array_localstorage[videos_counter])
 
 
+    //ОТПРАВЛЯЕМ ДАННЫЕ В ФУНКЦИЮ, КОТОРАЯ БУДЕТ ВЫВОДИТЬ ЛУЧШИЕ ВИДОСЫ В ТАБЛИЦУ
+    video_thumbnail = document.querySelectorAll('.yt-core-image--fill-parent-height')[ i / 2 ].src
     if (document.querySelector('.additional-div') != undefined) {
-      
+
+
+      //function video_list(result, video_title, video_url, video_thumbnail)
+      video_list(result + '%', video_title.textContent, video_title.parentElement.href, video_thumbnail)
+
+
+
     }
-    
+
 
   }
 

@@ -29,7 +29,7 @@ function spawn_additional_block(){
 
 	if (document.querySelector('.additional-div') == undefined) {
 
-	document.querySelector("#buttons").insertAdjacentHTML("afterbegin", '<div class="additional-div"> <button>HELLO WORLD!</button> <div class="additional-div-videos"> <table> <tbody class="videos-list"> </tbody> </table> </div> </div>')
+	document.querySelector("#buttons").insertAdjacentHTML("afterbegin", '<div class="additional-div"> <button>HELLO WORLD!</button> <div class="additional-div-videos"> <table style="background:red;"> <tbody class="videos-list"> <tr> <td>111</td> <td>222</td> <td>333</td> <td>444</td> <td>555</td> </tr> </tbody> </table> </div> </div>')
 
 	} else {
 
