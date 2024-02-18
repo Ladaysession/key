@@ -1,13 +1,19 @@
 {
   "manifest_version": 3,
   "name": "Key",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "content_scripts": [
     {
       "matches": [
         "<all_urls>"
       ],
-      "js": ["main_key.js", "percent_of_views.js", "additional_block.js", "videos_list.js"]
+      "js": ["main_key.js", "percent_of_views.js", "additional_block.js", "videos_list.js", "sort_content.js"]
     }
-  ]
+  ],
+  "background": {
+      "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "debug.html"
+  }
 }

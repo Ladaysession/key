@@ -30,6 +30,18 @@ document.addEventListener('keydown', function(event) {
     
   }
 
+//получение информации с страницы аналитики. не имеет отношение к ютуб-плагину, который получает инфу о видосах
+if (event.key == 'T' ) {
+
+    alert('test')
+    console.log('foo2222');
+    try {
+      sort_content()
+    } catch (err) {
+    }
+    
+    
+  }
 
 
 
