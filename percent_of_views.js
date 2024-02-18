@@ -6,9 +6,12 @@ array_localstorage = []
 subscribers_string = document.querySelectorAll('#subscriber-count')[0].textContent
 // subscribers_string = subscribers_string.substr(0,5)
 
+//ОЧИЩЕНИЕ ДОПОЛНИТЕЛЬНОГО БЛОГА, КУДА БУДУТ ВЫВОДИТЬСЯ ВИДЕО ПРИ КАЖДОМ СТАРТЕ ФУНКЦИИ
+if (document.querySelector(".videos-list") != undefined) {
+  video_list_table = document.querySelector(".videos-list")
+  video_list_table.innerHTML = ''
+}
 
-// video_list_table = document.querySelector(".videos-list")
-// video_list_table.innerHTML = ''
 
 
 //Thousands (K) or Millions (M) or Hundrets (H)
