@@ -172,7 +172,7 @@ while( i < videos.length){
 
 
     //ОТПРАВЛЯЕМ ДАННЫЕ В ФУНКЦИЮ, КОТОРАЯ БУДЕТ ВЫВОДИТЬ ЛУЧШИЕ ВИДОСЫ В ТАБЛИЦУ
-    video_thumbnail = document.querySelectorAll('.yt-core-image--fill-parent-height')[ i / 2 ].src
+    video_thumbnail = document.querySelectorAll('.yt-core-image--fill-parent-height')[ (i + 4) / 2 ].src
     if (document.querySelector('.additional-div') != undefined) {
 
 
