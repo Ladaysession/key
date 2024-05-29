@@ -3,7 +3,7 @@ array_localstorage = [0]
 function percent_of_views() {
   //ПОЛУЧАЕМ ЗНАЧЕНИЕ ПОДПИСЧИКОВ - НАЧАЛО
 array_localstorage = []
-subscribers_string = document.querySelectorAll('#subscriber-count')[0].textContent
+subscribers_string = document.querySelector("#page-header > yt-page-header-renderer > yt-page-header-view-model > div > div.page-header-view-model-wiz__page-header-headline > div > yt-content-metadata-view-model > div:nth-child(3) > span:nth-child(1)").textContent
 // subscribers_string = subscribers_string.substr(0,5)
 
 //ОЧИЩЕНИЕ ДОПОЛНИТЕЛЬНОГО БЛОГА, КУДА БУДУТ ВЫВОДИТЬСЯ ВИДЕО ПРИ КАЖДОМ СТАРТЕ ФУНКЦИИ
